@@ -1,18 +1,12 @@
-# Welcome to your Lovable project
+# Welcome to my portfolio project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/9ea67f33-d136-40d7-b353-56d4cf229469
+**URL**: https://dynamic-portfolio-two.vercel.app/
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ea67f33-d136-40d7-b353-56d4cf229469) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
