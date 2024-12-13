@@ -6,7 +6,7 @@ export const Projects = () => {
       title: "Real-Time Chat Application",
       description: "Full-stack chat app with real-time messaging, image sharing, and emoji support",
       tech: ["React", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
-      demo: "Live Demo",
+      demo: "https://real-time-chat-application-bp5u.onrender.com/login",
       github: "https://github.com/prashanth370",
     },
     {
@@ -19,7 +19,7 @@ export const Projects = () => {
       title: "FoodHut-Delivery",
       description: "Intuitive food delivery platform with streamlined order management",
       tech: ["HTML", "CSS", "JavaScript"],
-      demo: "Live Demo",
+      demo: "https://food-hut-rust.vercel.app/",
       github: "https://github.com/prashanth370",
     },
     {
@@ -31,45 +31,53 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary text-secondary-foreground p-4" id="projects">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 flex items-center gap-2">
+    <section className="py-20 bg-gradient-to-br from-secondary to-secondary/90 text-secondary-foreground p-4" id="projects">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold mb-12 flex items-center gap-2 justify-center md:justify-start">
           <Code className="text-primary" />
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-background/10 p-6 rounded-lg hover:bg-background/20 transition-colors animate-fade-in"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="group bg-background/10 backdrop-blur-sm p-8 rounded-xl hover:bg-background/20 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in shadow-lg hover:shadow-xl"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-sm mb-4 text-secondary-foreground/80">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
+              <h3 className="text-2xl font-semibold mb-3 text-primary-foreground group-hover:text-primary transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-base mb-4 text-secondary-foreground/90 leading-relaxed">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="text-xs px-2 py-1 bg-primary text-primary-foreground rounded"
+                    className="text-xs px-3 py-1 bg-primary/20 text-primary-foreground rounded-full font-medium"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-6">
                 {project.demo && (
                   <a
-                    href="#"
-                    className="text-sm text-primary hover:text-primary-foreground transition-colors"
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary hover:text-primary-foreground transition-colors flex items-center gap-1"
                   >
-                    Live Demo
+                    Live Demo →
                   </a>
                 )}
                 <a
                   href={project.github}
-                  className="text-sm text-primary hover:text-primary-foreground transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary hover:text-primary-foreground transition-colors flex items-center gap-1"
                 >
-                  GitHub
+                  GitHub →
                 </a>
               </div>
             </div>
